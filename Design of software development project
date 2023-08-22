@@ -1,0 +1,79 @@
+import datetime
+
+
+class Task:
+    def __init__(self, name, due_date, priority):
+        self.name = name
+        self.due_date = due_date
+        self.priority = priority
+
+    def __str__(self):
+        return f"Task: {self.name} - Due: {self.due_date} - Priority: {self.priority}"
+
+
+class TaskManager:
+    def __init__(self):
+        self.tasks = []
+
+    def add_task(self, task):
+        self.tasks.append(task)
+
+    def get_tasks(self):
+        return self.tasks
+
+    def get_task_by_name(self, name):
+        for task in self.tasks:
+            if task.name == name:
+                return task
+        return None
+
+    def get_tasks_by_due_date(self, due_date):
+        tasks = []
+        for task in self.tasks:
+            if task.due_date == due_date:
+                tasks.append(task)
+        return tasks
+
+    def get_tasks_by_priority(self, priority):
+        tasks = []
+        for task in self.tasks:
+            if task.priority == priority:
+                tasks.append(task)
+        return tasks
+
+    def get_all_tasks_due_today(self):
+        today = datetime.date.today()
+        return self.get_tasks_by_due_date(today)
+
+import datetime
+from dateutil.relativedelta import relativedelta
+
+# ... (Rest of your code remains the same)
+
+def get_all_tasks_due_this_week(self):
+    today = datetime.date.today()
+    next_week = today + relativedelta(days=7)
+    return self.get_tasks_by_due_date(next_week)
+
+
+
+if __name__ == "__main__":
+    task_manager = TaskManager()
+
+    task_1 = Task("Task 1", datetime.date(2023, 8, 25), 1)
+    task_2 = Task("Task 2", datetime.date(2023, 9, 1), 2)
+    task_3 = Task("Task 3", datetime.date(2023, 9, 8), 3)
+
+    task_manager.add_task(task_1)
+    task_manager.add_task(task_2)
+    task_manager.add_task(task_3)
+
+import datetime
+
+# ... (Rest of your code remains the same)
+
+def get_all_tasks_due_this_week(self):
+    today = datetime.date.today()
+    end_of_week = today + datetime.timedelta(days=(6 - today.weekday()))  # Calculate the end of the week
+    return self.get_tasks_by_due_date(end_of_week)
+
