@@ -1,0 +1,20 @@
+def agile_sdlc():
+  """Implements the Agile SDLC approach."""
+
+  # 1. Sprint planning
+  print("Sprint planning")
+
+  # 2. Development
+  print("Development")
+
+  # 3. Testing
+  print("Testing")
+
+  # 4. Review
+  print("Review")
+
+  # 5. Retrospective
+  print("Retrospective")
+
+if __name__ == "__main__":
+  agile_sdlc()
