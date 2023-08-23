@@ -1,0 +1,31 @@
+#quality assurance team 
+def software_development_quality_assurance_team():
+  """Defines a software development quality assurance team."""
+
+  team = {
+      "name": "Software Development Quality Assurance Team",
+      "members": [
+          {
+              "name": "Pankaj Gautam",
+              "role": "Software Engineer",
+              "expertise": ["QA", "Testing"]
+          },
+          {
+              "name": "Priyanshu",
+              "role": "QA Engineer",
+              "expertise": ["Manual Testing", "Automation Testing"]
+          },
+          {
+              "name": "Miashmi",
+              "role": "Test Manager",
+              "expertise": ["Test Planning", "Test Execution"]
+          }
+      ]
+  }
+
+  return team
+
+
+if __name__ == "__main__":
+  team = software_development_quality_assurance_team()
+  print(team)
